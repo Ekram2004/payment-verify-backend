@@ -15,7 +15,6 @@ EthioVerifyPay provides a secure verification layer. This API manages merchant a
 - **Deployment:** Render
 
 ## 🚀 Key Features
-- **Merchant Auth:** Secure Registration and Login system.
 - **Dynamic Verification:** Generates unique codes for every merchant to prevent URL spoofing.
 - **CORS Configured:** Securely communicates with the React frontend.
 - **Production Ready:** Optimized for deployment on Render with auto-sleep handling.
