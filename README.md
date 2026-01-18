@@ -23,8 +23,8 @@ EthioVerifyPay provides a secure verification layer. This API manages merchant a
 
 1. **Clone the repo:**
 bash
-  git clone https://github.com/YOUR_USERNAME/ethio-verify-backend.git
-  cd ethio-verify-backend
+  git clone (https://github.com/Ekram2004/payment-verify-backend)
+  cd payment-verify-backend
 ```
 
 2. Install dependencies:
