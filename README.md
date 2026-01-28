@@ -1,4 +1,4 @@
-# 🚀 EthioVerifyPay - Backend API
+# Payment-verification - Backend API
 
 This is the robust Node.js/Express backend for **EthioVerifyPay**, a fintech solution designed to eliminate payment fraud and manual entry errors in the Ethiopian merchant ecosystem.
 
