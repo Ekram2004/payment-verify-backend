@@ -1,61 +1,34 @@
-# Payment-verification - Backend API
+# EthioVerifyPay - Payment Verification API 🛡️
 
-This is the robust Node.js/Express backend for **EthioVerifyPay**, a fintech solution designed to eliminate payment fraud and manual entry errors in the Ethiopian merchant ecosystem.
+A robust Node.js/Express backend designed to eliminate payment fraud and manual entry errors in the Ethiopian merchant ecosystem (Telebirr/CBE).
 
-## 🌍 The Problem
-In Ethiopia, merchants often fall victim to fake payment screenshots (Telebirr/CBE). Additionally, customers frequently send money to the wrong account numbers due to manual typing errors.
+## 🚀 The Challenge
+Merchants in Ethiopia frequently face:
+1. **Fake Payment Screenshots:** Scammers showing edited images of successful transfers.
+2. **Manual Entry Errors:** Customers sending money to the wrong merchant account due to typos in USSD codes.
 
-## ✨ The Solution
-EthioVerifyPay provides a secure verification layer. This API manages merchant authentication, stores account details securely, and generates unique verification codes used to build deep-linked USSD payment strings.
+## 🛠️ System Architecture
+The API acts as a secure verification layer that:
+- Generates **unique merchant verification codes** to prevent spoofing.
+- Constructs **URL-encoded USSD strings** (e.g., `*127*1*...%23`) that interface directly with mobile dialers.
+- Provides a secure interface for the React frontend to fetch verified merchant credentials.
 
-## 🛠 Tech Stack
+## ⚙️ Technical Highlights
+- **Environment Management:** Securely handles MongoDB Atlas connections and API keys via `.env`.
+- **CORS Security:** Configured to allow only trusted frontend origins, protecting the verification flow.
+- **Error Handling:** Centralized middleware to handle database connection failures and invalid merchant lookups.
+
+## 📦 Tech Stack
 - **Runtime:** Node.js
 - **Framework:** Express.js
 - **Database:** MongoDB Atlas (Mongoose ODM)
-- **Deployment:** Render
+- **Deployment:** Render (with auto-sleep prevention logic)
 
-## 🚀 Key Features
-- **Dynamic Verification:** Generates unique codes for every merchant to prevent URL spoofing.
-- **CORS Configured:** Securely communicates with the React frontend.
-- **Production Ready:** Optimized for deployment on Render with auto-sleep handling.
+## 🏗️ Local Setup
+1. `git clone https://github.com/Ekram2004/payment-verify-backend`
+2. `npm install`
+3. Create `.env` with `MONGODB_URI` and `PORT`.
+4. `npm start`
 
-## ⚙️ Installation & Setup
-
-1. **Clone the repo:**
-bash
-  git clone https://github.com/Ekram2004/payment-verify-backend
-
-  cd payment-verify-backend
-```
-
-2. Install dependencies:
-  
-```
-
-bash
-  npm install
-
-```
-
-3. Environment Variables:
-  Create a .env file in the root and add:
-  
-```
-env
-  MONGODB_URI=your_mongodb_connection_string
-  PORT=5000
-
-  ```
-
-4. Run the server:
-  
-```
-bash
-  node index.js
-
-  ```
-
- 🔗 Related Repositories
-- Frontend Repository (https://github.com/Ekram2004/payment-verify-frontend)
-
-```
+---
+*Developed by [Your Name] - 4th Year Software Engineering Student*
