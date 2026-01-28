@@ -4,14 +4,12 @@ A robust Node.js/Express backend designed to eliminate payment fraud and manual 
 
 ## 🚀 The Challenge
 Merchants in Ethiopia frequently face:
-1. **Fake Payment Screenshots:** Scammers showing edited images of successful transfers.
-2. **Manual Entry Errors:** Customers sending money to the wrong merchant account due to typos in USSD codes.
+1. **Manual Entry Errors:** Customers sending money to the wrong merchant account due to typos in USSD codes.
 
 ## 🛠️ System Architecture
 The API acts as a secure verification layer that:
 - Generates **unique merchant verification codes** to prevent spoofing.
 - Constructs **URL-encoded USSD strings** (e.g., `*127*1*...%23`) that interface directly with mobile dialers.
-- Provides a secure interface for the React frontend to fetch verified merchant credentials.
 
 ## ⚙️ Technical Highlights
 - **Environment Management:** Securely handles MongoDB Atlas connections and API keys via `.env`.
@@ -31,4 +29,4 @@ The API acts as a secure verification layer that:
 4. `npm start`
 
 ---
-*Developed by [Your Name] - 4th Year Software Engineering Student*
+*Developed by Ekram Asrar- 4th Year Software Engineering Student*
